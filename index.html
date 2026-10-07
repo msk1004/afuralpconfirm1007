@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LP制作 確認・画像ご提供のお願い｜Skinimalist</title>
+<style>
+:root{--ink:#1d2a2b;--sub:#5b6b6c;--line:#d9e2e1;--bg:#f6f9f8;--pri:#1f6f68;--pri-d:#154e49;--pri-l:#e3f1ef;--warn:#b8650a;--warn-l:#fdf1df;--red:#b3261e;--red-l:#fbe9e7;--blue:#2457a6;--blue-l:#e7eefa}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Yu Gothic","游ゴシック","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;line-height:1.75;font-size:15px}
+.wrap{max-width:980px;margin:0 auto;padding:32px 20px 80px}
+header.top{background:#fff;border:1px solid var(--line);border-top:6px solid var(--pri);border-radius:8px;padding:28px 32px;margin-bottom:24px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--pri);font-weight:700}
+h1{font-size:26px;line-height:1.4;margin:6px 0 10px}
+.meta{display:flex;flex-wrap:wrap;gap:6px 24px;font-size:13px;color:var(--sub);margin-top:12px}
+h2{font-size:20px;margin:44px 0 6px;padding-left:12px;border-left:5px solid var(--pri)}
+h2 small{display:block;font-size:13px;color:var(--sub);font-weight:400;margin-top:2px}
+h3{font-size:16px;margin:0}
+.card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:20px 24px;margin:14px 0}
+.lead{font-size:15px}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:6px}
+.three div{background:var(--pri-l);border-radius:8px;padding:14px 16px}
+.three b{display:block;color:var(--pri-d);margin-bottom:2px}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#eef4f3;white-space:nowrap}
+.tag{display:inline-block;font-size:11.5px;font-weight:700;padding:1px 9px;border-radius:99px;margin-right:4px;vertical-align:1px}
+.t-max{background:var(--red);color:#fff}.t-hi{background:var(--warn);color:#fff}.t-mid{background:var(--blue);color:#fff}.t-low{background:#8a9a9a;color:#fff}
+.k-new{background:var(--red-l);color:var(--red)}.k-re{background:var(--blue-l);color:var(--blue)}.k-keep{background:#eceff0;color:#4a5859}
+.note{background:var(--warn-l);border-left:4px solid var(--warn);padding:10px 14px;border-radius:4px;font-size:14px;margin:10px 0}
+.help{background:var(--blue-l);border-left:4px solid var(--blue);padding:10px 14px;border-radius:4px;font-size:14px;margin:10px 0}
+.q ul{margin:6px 0 8px 1.2em;padding:0}
+.ans{border:1px dashed #9fb3b1;border-radius:6px;min-height:54px;padding:6px 10px;color:#8aa;font-size:13px;background:#fcfefd}
+.q-h{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.img-card{background:#fff;border:1px solid var(--line);border-radius:10px;margin:18px 0;overflow:hidden;break-inside:avoid}
+.img-h{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:#eef4f3;padding:12px 18px;border-bottom:1px solid var(--line)}
+.img-id{font-family:Consolas,monospace;font-weight:700;color:var(--pri-d)}
+.img-b{display:grid;grid-template-columns:200px 1fr;gap:20px;padding:18px}
+.side{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.rt{background:#f0f3f3;border:1px solid var(--line);border-radius:6px;padding:12px;width:100%;display:flex;justify-content:center}
+.rt-b{background:repeating-linear-gradient(45deg,#cfe6e3,#cfe6e3 8px,#e3f1ef 8px,#e3f1ef 16px);border:2px solid var(--pri);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--pri-d);text-align:center}
+.mm{font-size:11px;border:1px solid var(--line);border-radius:6px;overflow:hidden;width:100%}
+.mm-t{background:var(--ink);color:#fff;padding:3px 8px;font-weight:700}
+.mm-r{padding:1px 8px;border-top:1px solid #eef2f2;color:#8a9a9a}
+.mm-r.on{background:var(--pri);color:#fff;font-weight:700}
+.spec{margin:0 0 10px;font-size:13.5px}
+.spec th{width:100px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
+.two h4{margin:0 0 4px;font-size:13.5px}
+.two ul{margin:0 0 0 1.1em;padding:0;font-size:13.5px}
+.ok h4{color:var(--pri-d)}.ng h4{color:var(--red)}
+.chk{padding:0}.chk li{list-style:none;margin-left:0}.chk li:before{content:"☐ "}
+code{background:#eef1f1;padding:1px 6px;border-radius:4px;font-size:13px}
+.dl{border:2px solid var(--pri);border-radius:10px;background:#fff;padding:6px 22px 14px;margin:14px 0}
+footer{margin-top:50px;color:var(--sub);font-size:12.5px;text-align:center}
+@media(max-width:720px){.three{grid-template-columns:1fr}.img-b{grid-template-columns:1fr}.two{grid-template-columns:1fr}}
+@media print{body{background:#fff;font-size:12.5px}.wrap{padding:0}.card,.img-card,.dl{break-inside:avoid}h2{break-after:avoid}}
+</style></head><body><div class="wrap"><header class="top">
+<div class="eyebrow">SKINIMALIST LP 制作　確認・ご提供のお願い</div>
+<h1>LPの内容確認と、制作に必要な画像のご提供のお願い</h1>
+<p class="lead">LP（スマートフォン版）の構成案が整いました。公開に向けて、<b>①内容・構成のご確認</b>と<b>②画像のご用意</b>をお願いしたく、本書にまとめました。専門用語はできるだけ避けて記載しています。ご不明点はそのままお知らせください。</p>
+<div class="meta"><span>株式会社アフラ　御中</span><span>作成日：2026年10月7日</span><span>作成：株式会社新東通信　エステティック通信チーム</span></div>
+</header>
+
+<h2>本日お願いしたいこと<small>まずは全体像をご確認ください</small></h2>
+<div class="card">
+<div class="three">
+<div><b>① 内容・構成のご確認</b>LP全体の流れ（17ブロック）に違和感がないかを確認します。</div>
+<div><b>② 未確定の情報のご回答</b>卸条件・導入サポート・事例など、LPに載せる情報を教えてください。（第1部）</div>
+<div><b>③ 画像のご用意</b>撮影が必要なもの・サイズ調整が必要なものをご依頼します。（第2部）</div>
+</div>
+<table style="margin-top:16px">
+<tr><th>スケジュール（案）</th><th>内容</th></tr>
+<tr><td>本日（10/7）</td><td>構成案のご確認／第1部のご回答依頼／第2部の画像ご依頼</td></tr>
+<tr><td>10/16（金）まで</td><td>第1部のご回答と、第2部の画像のご提供（難しい項目は代替案をご相談します）</td></tr>
+<tr><td>10/16〜10/23</td><td>弊社でLPへ反映 → 貴社にて確認・微調整</td></tr>
+<tr><td>10月末</td><td>LP納品</td></tr>
+</table>
+<p class="note" style="margin-bottom:0">※ 日程は目安です。画像が間に合わない場合は、仮画像で先に進行し、後から差し替えることもできます。</p>
+</div>
+
+<h2>LPの全体構成（ご確認ください）<small>スマホで見る順番に、上から並べています</small></h2>
+<div class="card">
+<table>
+<tr><th>#</th><th>ブロック</th><th>内容</th><th>状態</th></tr>
+<tr><td>①</td><td>最初の画面</td><td>「施術の手を止めずに、売上をもう一段。」＋ 相談／LINEボタン</td><td>現行を踏襲</td></tr>
+<tr><td>②</td><td>実績数値</td><td>15店舗／89%／330万円／6:4</td><td>数字の最新確認</td></tr>
+<tr><td>③④</td><td>お悩み／店販の考え方</td><td>施術売上には天井がある → 店販で解決</td><td>整理して再構成</td></tr>
+<tr><td>⑤</td><td>コンセプト</td><td>Aqua-less®処方の説明＋商品集合写真</td><td>商品写真が必要</td></tr>
+<tr><td>⑦</td><td>3つの売れる</td><td>価格／顧客管理／接客</td><td>現行を踏襲</td></tr>
+<tr><td>⑧</td><td>製品ラインナップ</td><td>4製品の価格・悩み別の説明</td><td>画像サイズ統一</td></tr>
+<tr><td>⑨</td><td>粗利シミュレーション</td><td>月30名購入した場合の売上試算</td><td><span class="tag k-new">新規</span>卸条件の確認が必要</td></tr>
+<tr><td>⑪</td><td>導入サポート</td><td>販促ツール・カウンセリングシート等</td><td><span class="tag k-new">新規</span>内容の確認が必要</td></tr>
+<tr><td>⑫</td><td>導入サロンの声</td><td>同業者の事例×3</td><td><span class="tag k-new">新規</span>事例情報が必要</td></tr>
+<tr><td>⑬</td><td>導入の流れ</td><td>問い合わせ → 無料相談 → ご導入</td><td><span class="tag k-new">新規</span>所要日数の確認</td></tr>
+<tr><td>⑭</td><td>約束</td><td>その場での契約は一切ありません</td><td><span class="tag k-new">新規</span></td></tr>
+<tr><td>⑯</td><td>よくある質問</td><td>ロット・返品・教育・併売など6問</td><td><span class="tag k-new">新規</span>回答の確認</td></tr>
+<tr><td>⑰</td><td>会社概要</td><td>リベルタ様・アフラ様の紹介</td><td>掲載内容の確認</td></tr>
+</table>
+<p class="help" style="margin-bottom:0">相談ボタンは全体で4か所に配置し、フォームはLP内に設置します（外部フォームへの移動をなくすことで、離脱を防ぎます）。</p>
+</div>
+<h2>第1部　内容のご確認事項<small>わかる範囲でご記入ください。「未定」「社内確認中」でも構いません</small></h2><div class="card q"><div class="q-h"><span class="tag t-hi">必須</span><h3>① 卸条件・初期費用</h3></div><p style="margin:4px 0 0;color:var(--sub);font-size:13.5px">「粗利シミュレーション」と「よくある質問」に載せる内容です。</p><ul class="chk"><li>卸値・掛率（例：定価の◯%）</li><li>最低発注ロット・初期費用の有無</li><li>返品・在庫引取の可否</li></ul><p class="help" style="margin:6px 0 8px">開示が難しい場合は「無料相談で貴サロンの規模に合わせて個別試算します」という表現に切り替えます。</p><div class="ans">ご回答欄</div></div><div class="card q"><div class="q-h"><span class="tag t-hi">必須</span><h3>② 取り扱いルール</h3></div><p style="margin:4px 0 0;color:var(--sub);font-size:13.5px">サロン経営者が必ず気にするポイントです。</p><ul class="chk"><li>近隣サロンへの卸方針（エリア・テリトリー制の有無）</li><li>他社商材との併売可否</li></ul><div class="ans">ご回答欄</div></div><div class="card q"><div class="q-h"><span class="tag t-hi">必須</span><h3>③ 導入サポートの実際の内容</h3></div><p style="margin:4px 0 0;color:var(--sub);font-size:13.5px">現在は仮のテキストです。実際に提供しているものに修正します。</p><ul class="chk"><li>店頭販促ツール（POP／什器／リーフレット）は提供していますか？</li><li>鉄則カウンセリングシートの名称・内容</li><li>SNS用素材の提供有無</li><li>スタッフ向け研修の有無・形式（オンライン／来店）</li></ul><div class="ans">ご回答欄</div></div><div class="card q"><div class="q-h"><span class="tag t-hi">必須</span><h3>④ 導入までの流れ・所要日数</h3></div><p style="margin:4px 0 0;color:var(--sub);font-size:13.5px">問い合わせ後の流れを具体的に示します。</p><ul class="chk"><li>サンプル・条件案内までの日数（ご相談後 ◯日）</li><li>申込から納品までの日数（◯日）</li></ul><div class="ans">ご回答欄</div></div><div class="card q"><div class="q-h"><span class="tag t-max">最優先</span><h3>⑤ 導入サロンの声（3件）</h3></div><p style="margin:4px 0 0;color:var(--sub);font-size:13.5px">同業者の声は、相談予約への後押しに最も影響します。</p><ul class="chk"><li>店名（イニシャル可）・エリア・スタッフ数</li><li>導入前の課題／導入の決め手／導入後の変化</li><li>導入前後の店販売上・リピート率などの数字</li><li>写真と、LPへの掲載許諾の有無</li></ul><p class="help" style="margin:6px 0 8px">3件そろわない場合は、1〜2件でも掲載可能です。</p><div class="ans">ご回答欄</div></div><div class="card q"><div class="q-h"><span class="tag t-hi">必須</span><h3>⑥ 実績数値の最新確認</h3></div><p style="margin:4px 0 0;color:var(--sub);font-size:13.5px">最初の画面で大きく使う数字です。</p><ul class="chk"><li>15店舗／89%／330万円／店販:施術=6:4 は最新の数字ですか？</li><li>算出方法・対象期間（注釈に記載します）</li></ul><div class="ans">ご回答欄</div></div><div class="card q"><div class="q-h"><span class="tag t-low">任意</span><h3>⑦ 会社概要の掲載内容</h3></div><p style="margin:4px 0 0;color:var(--sub);font-size:13.5px">取引先としての信頼感を補強します。</p><ul class="chk"><li>所在地・代表者名・設立年の掲載可否</li><li>製造体制（自社工場・許可番号など）</li><li>リベルタ様・アフラ様の2社併記でよいか</li></ul><div class="ans">ご回答欄</div></div><div class="card q"><div class="q-h"><span class="tag t-hi">必須</span><h3>⑧ 表現・商標の確認</h3></div><p style="margin:4px 0 0;color:var(--sub);font-size:13.5px">広告・LPの表現は薬機法・景品表示法の確認が必要です。</p><ul class="chk"><li>「美容成分100%」「業界初」の根拠資料</li><li>「Aqua-less®」の商標登録状況と表記ルール</li><li>効能に関わる表現の最終確認者（貴社担当・薬事担当）</li></ul><p class="help" style="margin:6px 0 8px">根拠が確認できない表現は、弊社側で修正案をご提示します。</p><div class="ans">ご回答欄</div></div><div class="card q"><div class="q-h"><span class="tag t-hi">必須</span><h3>⑨ 受け口・導線</h3></div><p style="margin:4px 0 0;color:var(--sub);font-size:13.5px">問い合わせ導線を整理します。</p><ul class="chk"><li>相談予約フォームの通知先メールアドレス</li><li>LINE公式アカウントのURL（現行のもので継続でよいか）</li><li>問い合わせ後の返信担当者</li></ul><div class="ans">ご回答欄</div></div><div class="card q"><div class="q-h"><span class="tag t-hi">必須</span><h3>⑩ LPの公開方法</h3></div><p style="margin:4px 0 0;color:var(--sub);font-size:13.5px">公開先により納品形態が変わります。</p><ul class="chk"><li>貴社サーバーにアップロード／弊社ドメインで管理運用 のどちらにしますか？</li><li>独自ドメインを使う場合、ドメイン・DNS設定の担当者</li></ul><div class="ans">ご回答欄</div></div><div class="card q"><div class="q-h"><span class="tag t-low">任意</span><h3>⑪ 連絡事項（前回宿題の確認）</h3></div><ul class="chk"><li>自社で配信している広告の配信結果データの共有可否</li><li>現行LP・広告アカウントの閲覧権限の付与可否</li></ul><div class="ans">ご回答欄</div></div><h2>第2部　画像のご提供のお願い<small>デザイナー様にそのままお渡しいただける形式でまとめています</small></h2>
+<div class="card">
+<p class="lead" style="margin-top:0"><b>画像について、まず知っておいていただきたいこと</b></p>
+<table>
+<tr><th>用語</th><th>意味</th></tr>
+<tr><td>px（ピクセル）</td><td>画像の大きさの単位。「720×540px」は横720・縦540の大きさです。</td></tr>
+<tr><td>2倍サイズで納品</td><td>スマホの画面は細かいため、表示サイズの2倍の大きさで用意すると、くっきり表示されます。</td></tr>
+<tr><td>透過PNG</td><td>背景が透明な画像。製品の切り抜き画像などに使います。</td></tr>
+<tr><td>WebP</td><td>軽量な画像形式。表示速度が上がります。対応が難しければJPGで問題ありません。</td></tr>
+</table>
+<p class="note" style="margin-bottom:0">本LPは、全面画像による重さを解消するため、<b>必要な箇所にだけ画像を使う構成</b>に変更しています。そのため、今回ご用意いただく画像は限られています。</p>
+</div>
+
+<h3 style="margin:26px 0 4px">画像一覧（早見表）</h3>
+<div class="card" style="padding:12px">
+<table>
+<tr><th>番号</th><th>画像</th><th>表示サイズ</th><th>区分</th><th>優先度</th></tr><tr><td><code>IMG-01</code></td><td>商品集合写真（4製品を横に並べた1枚）</td><td>720×540px</td><td><span class="tag k-new">新規撮影</span></td><td><span class="tag t-max">最重要</span></td></tr><tr><td><code>IMG-02</code></td><td>販促ツールの実物写真（1〜3点）</td><td>720×405px</td><td><span class="tag k-new">新規撮影</span></td><td><span class="tag t-hi">高</span></td></tr><tr><td><code>IMG-03〜05</code></td><td>導入サロンの声に添える写真（3点）</td><td>200×200px</td><td><span class="tag k-new">新規（3点）</span></td><td><span class="tag t-hi">高</span></td></tr><tr><td><code>IMG-06〜09</code></td><td>製品画像4点（正方形にそろえる）</td><td>800×800px</td><td><span class="tag k-re">既存データの再書き出し</span></td><td><span class="tag t-mid">中</span></td></tr><tr><td><code>IMG-10</code></td><td>最初の画面（FV）の背景写真</td><td>720×1240px</td><td><span class="tag k-re">既存データの再トリミング</span></td><td><span class="tag t-mid">中</span></td></tr><tr><td><code>IMG-11〜13</code></td><td>3つの売れるアイコン／お悩み別画像／ロゴ</td><td>288×288px</td><td><span class="tag k-keep">既存を流用（サイズ調整のみ）</span></td><td><span class="tag t-low">低</span></td></tr></table></div><div class="img-card"><div class="img-h"><span class="img-id">IMG-01</span><span class="tag t-max">最重要</span><span class="tag k-new">新規撮影</span><h3>商品集合写真（4製品を横に並べた1枚）</h3></div><div class="img-b"><div class="side"><div class="rt"><div class="rt-b" style="width:150px;height:112px"><span>720×540px</span></div></div><div class="mm"><div class="mm-t">LPのどこに入る？</div><div class="mm-r">① 最初の画面（FV）</div><div class="mm-r">② 実績数値</div><div class="mm-r">③ お悩み</div><div class="mm-r">④ 店販の考え方</div><div class="mm-r on">⑤ コンセプト</div><div class="mm-r">相談ボタン</div><div class="mm-r">⑦ 3つの売れる</div><div class="mm-r">⑧ 製品ラインナップ</div><div class="mm-r">⑨ 粗利シミュレーション</div><div class="mm-r">相談ボタン</div><div class="mm-r">⑪ 導入サポート</div><div class="mm-r">⑫ 導入サロンの声</div><div class="mm-r">⑬ 導入の流れ</div><div class="mm-r">⑭ 約束</div><div class="mm-r">相談ボタン（メイン）</div><div class="mm-r">⑯ よくある質問</div><div class="mm-r">⑰ 会社概要</div></div></div><div><p style="margin:0 0 10px">LPの顔になる、いちばん大事な写真です。「エッセンスリッチローション」「シラタマアンプル」「ラディアンスピール」「グラナアンプル」の4つを、横一列に並べて撮影してください。</p><table class="spec"><tr><th>表示サイズ</th><td>720×540px（横×縦）</td></tr><tr><th>納品サイズ</th><td>1440 × 1080 px（表示サイズの2倍・高精細ディスプレイ対応）</td></tr><tr><th>形式</th><td>JPG（高画質）／背景透過は不要</td></tr></table><div class="two"><div class="ok"><h4>◎ 撮り方・作り方のポイント</h4><ul><li>背景は白〜ベージュ系の無地（白い紙・布でもOK）</li><li>窓際など、自然光（やわらかい明るい光）で撮影</li><li>4製品の前面ラベル（商品名）が読める距離まで寄る</li><li>製品の高さをそろえ、中央に整列。左右に余白を残す</li><li>スマホで撮影する場合は「横向き」「ズームではなく自分が近づく」「同じ高さ・正面から」</li></ul></div><div class="ng"><h4>× 避けていただきたい例</h4><ul><li>影が濃い・色かぶり（黄色っぽい）</li><li>ラベルが反射で読めない</li><li>背景に生活感のあるものが写り込む</li><li>縦向きで撮影（横長で使うため）</li></ul></div></div><div class="ans" style="margin-top:12px;min-height:38px">提供予定日／備考</div></div></div></div><div class="img-card"><div class="img-h"><span class="img-id">IMG-02</span><span class="tag t-hi">高</span><span class="tag k-new">新規撮影</span><h3>販促ツールの実物写真（1〜3点）</h3></div><div class="img-b"><div class="side"><div class="rt"><div class="rt-b" style="width:150px;height:84px"><span>720×405px</span></div></div><div class="mm"><div class="mm-t">LPのどこに入る？</div><div class="mm-r">① 最初の画面（FV）</div><div class="mm-r">② 実績数値</div><div class="mm-r">③ お悩み</div><div class="mm-r">④ 店販の考え方</div><div class="mm-r">⑤ コンセプト</div><div class="mm-r">相談ボタン</div><div class="mm-r">⑦ 3つの売れる</div><div class="mm-r">⑧ 製品ラインナップ</div><div class="mm-r">⑨ 粗利シミュレーション</div><div class="mm-r">相談ボタン</div><div class="mm-r on">⑪ 導入サポート</div><div class="mm-r">⑫ 導入サロンの声</div><div class="mm-r">⑬ 導入の流れ</div><div class="mm-r">⑭ 約束</div><div class="mm-r">相談ボタン（メイン）</div><div class="mm-r">⑯ よくある質問</div><div class="mm-r">⑰ 会社概要</div></div></div><div><p style="margin:0 0 10px">導入サロンに提供している販促物（POP・什器・リーフレット・カウンセリングシートなど）の実物を並べた写真です。「置いて終わりにしない」という安心感を伝えます。</p><table class="spec"><tr><th>表示サイズ</th><td>720×405px（横×縦）</td></tr><tr><th>納品サイズ</th><td>1440 × 810 px</td></tr><tr><th>形式</th><td>JPG（高画質）</td></tr></table><div class="two"><div class="ok"><h4>◎ 撮り方・作り方のポイント</h4><ul><li>提供している販促物を1〜3点、机や台の上に並べる</li><li>真上（俯瞰）または斜め上から、全体が写るように撮影</li><li>背景は無地。ツールの文字が読める距離で</li><li>実際にサロンの店頭に置いた様子の写真があれば、そちらも歓迎です</li></ul></div><div class="ng"><h4>× 避けていただきたい例</h4><ul><li>ピンぼけ</li><li>ツールの一部が切れている</li><li>他社名やサロン名が写り込んでいる（掲載許諾がない場合）</li></ul></div></div><div class="ans" style="margin-top:12px;min-height:38px">提供予定日／備考</div></div></div></div><div class="img-card"><div class="img-h"><span class="img-id">IMG-03〜05</span><span class="tag t-hi">高</span><span class="tag k-new">新規（3点）</span><h3>導入サロンの声に添える写真（3点）</h3></div><div class="img-b"><div class="side"><div class="rt"><div class="rt-b" style="width:150px;height:150px"><span>200×200px</span></div></div><div class="mm"><div class="mm-t">LPのどこに入る？</div><div class="mm-r">① 最初の画面（FV）</div><div class="mm-r">② 実績数値</div><div class="mm-r">③ お悩み</div><div class="mm-r">④ 店販の考え方</div><div class="mm-r">⑤ コンセプト</div><div class="mm-r">相談ボタン</div><div class="mm-r">⑦ 3つの売れる</div><div class="mm-r">⑧ 製品ラインナップ</div><div class="mm-r">⑨ 粗利シミュレーション</div><div class="mm-r">相談ボタン</div><div class="mm-r">⑪ 導入サポート</div><div class="mm-r on">⑫ 導入サロンの声</div><div class="mm-r">⑬ 導入の流れ</div><div class="mm-r">⑭ 約束</div><div class="mm-r">相談ボタン（メイン）</div><div class="mm-r">⑯ よくある質問</div><div class="mm-r">⑰ 会社概要</div></div></div><div><p style="margin:0 0 10px">「導入サロンの声」に載せる、店舗または担当者の写真です。顔出しが難しい場合は、店内・施術室・商品を置いた棚などでも代用できます。</p><table class="spec"><tr><th>表示サイズ</th><td>200×200px（横×縦）</td></tr><tr><th>納品サイズ</th><td>400 × 400 px（正方形）× 3点</td></tr><tr><th>形式</th><td>JPG</td></tr></table><div class="two"><div class="ok"><h4>◎ 撮り方・作り方のポイント</h4><ul><li>正方形に切り抜いても大丈夫なよう、被写体を中央に配置</li><li>明るく清潔感のある写真を選ぶ</li><li>お顔が写る場合は、必ず本人から掲載許諾を取得（第1部「確認事項⑤」）</li></ul></div><div class="ng"><h4>× 避けていただきたい例</h4><ul><li>暗い・小さすぎる写真（200px四方でも粗く見えます）</li><li>許諾のない人物・店舗写真</li></ul></div></div><div class="ans" style="margin-top:12px;min-height:38px">提供予定日／備考</div></div></div></div><div class="img-card"><div class="img-h"><span class="img-id">IMG-06〜09</span><span class="tag t-mid">中</span><span class="tag k-re">既存データの再書き出し</span><h3>製品画像4点（正方形にそろえる）</h3></div><div class="img-b"><div class="side"><div class="rt"><div class="rt-b" style="width:150px;height:150px"><span>800×800px</span></div></div><div class="mm"><div class="mm-t">LPのどこに入る？</div><div class="mm-r">① 最初の画面（FV）</div><div class="mm-r">② 実績数値</div><div class="mm-r">③ お悩み</div><div class="mm-r">④ 店販の考え方</div><div class="mm-r">⑤ コンセプト</div><div class="mm-r">相談ボタン</div><div class="mm-r">⑦ 3つの売れる</div><div class="mm-r on">⑧ 製品ラインナップ</div><div class="mm-r">⑨ 粗利シミュレーション</div><div class="mm-r">相談ボタン</div><div class="mm-r">⑪ 導入サポート</div><div class="mm-r">⑫ 導入サロンの声</div><div class="mm-r">⑬ 導入の流れ</div><div class="mm-r">⑭ 約束</div><div class="mm-r">相談ボタン（メイン）</div><div class="mm-r">⑯ よくある質問</div><div class="mm-r">⑰ 会社概要</div></div></div><div><p style="margin:0 0 10px">現在の4製品画像は、縦横の比率がバラバラ（393×573／573×563／490×509／568×589）のため、並べると凸凹に見えます。正方形に統一して、書き出し直しをお願いします。</p><table class="spec"><tr><th>表示サイズ</th><td>800×800px（横×縦）</td></tr><tr><th>納品サイズ</th><td>800 × 800 px × 4点（現行LPと同じファイル名で）</td></tr><tr><th>形式</th><td>PNG（背景は白 または 透過）</td></tr></table><div class="two"><div class="ok"><h4>◎ 撮り方・作り方のポイント</h4><ul><li>キャンバスを 800×800 px の正方形に設定</li><li>製品が中央・上下左右に均等な余白（目安：製品の高さがキャンバスの約80%）</li><li>4点とも同じ余白・同じ大きさ感でそろえる</li><li>ファイル名：product1.png〜product4.png（現行と同名）</li></ul></div><div class="ng"><h4>× 避けていただきたい例</h4><ul><li>製品ごとに余白が違う</li><li>背景が白でも透過でもない（グレー等）</li><li>引き伸ばしで縦横比が崩れる</li></ul></div></div><div class="ans" style="margin-top:12px;min-height:38px">提供予定日／備考</div></div></div></div><div class="img-card"><div class="img-h"><span class="img-id">IMG-10</span><span class="tag t-mid">中</span><span class="tag k-re">既存データの再トリミング</span><h3>最初の画面（FV）の背景写真</h3></div><div class="img-b"><div class="side"><div class="rt"><div class="rt-b" style="width:87px;height:150px"><span>720×1240px</span></div></div><div class="mm"><div class="mm-t">LPのどこに入る？</div><div class="mm-r on">① 最初の画面（FV）</div><div class="mm-r">② 実績数値</div><div class="mm-r">③ お悩み</div><div class="mm-r">④ 店販の考え方</div><div class="mm-r">⑤ コンセプト</div><div class="mm-r">相談ボタン</div><div class="mm-r">⑦ 3つの売れる</div><div class="mm-r">⑧ 製品ラインナップ</div><div class="mm-r">⑨ 粗利シミュレーション</div><div class="mm-r">相談ボタン</div><div class="mm-r">⑪ 導入サポート</div><div class="mm-r">⑫ 導入サロンの声</div><div class="mm-r">⑬ 導入の流れ</div><div class="mm-r">⑭ 約束</div><div class="mm-r">相談ボタン（メイン）</div><div class="mm-r">⑯ よくある質問</div><div class="mm-r">⑰ 会社概要</div></div></div><div><p style="margin:0 0 10px">現行LPの top_sp.jpg（1400×2192）を、新しいLPの構成に合わせて切り直してください。写真の上に文字を載せるため、被写体は上の3分の1に収める必要があります。</p><table class="spec"><tr><th>表示サイズ</th><td>720×1240px（横×縦）</td></tr><tr><th>納品サイズ</th><td>720 × 1240 px（可能なら2倍の1440 × 2480 px）</td></tr><tr><th>形式</th><td>WebP推奨（難しければJPG）。容量は現行の半分以下が目標</td></tr></table><div class="two"><div class="ok"><h4>◎ 撮り方・作り方のポイント</h4><ul><li>被写体（人物・商品）が画像の上1/3に収まるよう再トリミング</li><li>下の2/3は文字が載るので、主役が入らない（なるべく無地に近い）状態にする</li><li>元データ（高解像度）が貴社にあれば、そちらからの書き出しが望ましい</li></ul></div><div class="ng"><h4>× 避けていただきたい例</h4><ul><li>被写体が中央〜下にある（文字と重なる）</li><li>容量が大きいまま（スマホで表示が遅くなる）</li></ul></div></div><div class="ans" style="margin-top:12px;min-height:38px">提供予定日／備考</div></div></div></div><div class="img-card"><div class="img-h"><span class="img-id">IMG-11〜13</span><span class="tag t-low">低</span><span class="tag k-keep">既存を流用（サイズ調整のみ）</span><h3>3つの売れるアイコン／お悩み別画像／ロゴ</h3></div><div class="img-b"><div class="side"><div class="rt"><div class="rt-b" style="width:150px;height:150px"><span>288×288px</span></div></div><div class="mm"><div class="mm-t">LPのどこに入る？</div><div class="mm-r">① 最初の画面（FV）</div><div class="mm-r">② 実績数値</div><div class="mm-r">③ お悩み</div><div class="mm-r">④ 店販の考え方</div><div class="mm-r">⑤ コンセプト</div><div class="mm-r">相談ボタン</div><div class="mm-r on">⑦ 3つの売れる</div><div class="mm-r on">⑧ 製品ラインナップ</div><div class="mm-r">⑨ 粗利シミュレーション</div><div class="mm-r">相談ボタン</div><div class="mm-r">⑪ 導入サポート</div><div class="mm-r">⑫ 導入サロンの声</div><div class="mm-r">⑬ 導入の流れ</div><div class="mm-r">⑭ 約束</div><div class="mm-r">相談ボタン（メイン）</div><div class="mm-r">⑯ よくある質問</div><div class="mm-r on">⑰ 会社概要</div></div></div><div><p style="margin:0 0 10px">現行のデータをそのまま活用します。サイズ変更だけで済みます。</p><table class="spec"><tr><th>表示サイズ</th><td>288×288px（横×縦）</td></tr><tr><th>納品サイズ</th><td>aqualess_point1〜3：288×288 px（透過PNG）／concern1〜4：720×410 px／logo：600×115 px</td></tr><tr><th>形式</th><td>PNG（透過維持）</td></tr></table><div class="two"><div class="ok"><h4>◎ 撮り方・作り方のポイント</h4><ul><li>aqualess_point1〜3.png（800×806）→ 288×288 px に縮小（透過維持）</li><li>concern1〜4.png（758×432）→ 720×410 px</li><li>logo.png（1394×268）→ 600×115 px</li></ul></div><div class="ng"><h4>× 避けていただきたい例</h4><ul><li>縮小時に縦横比が変わる</li><li>透過部分が白塗りになる</li></ul></div></div><div class="ans" style="margin-top:12px;min-height:38px">提供予定日／備考</div></div></div></div>
+<h3 style="margin:30px 0 4px">用意不要の画像（文字をHTMLに置き換えるため）</h3>
+<div class="card"><p style="margin:0">現行LPで使用している <code>aqualess_exp_sp.png</code>（背景がほぼ黒で、新LPの白基調と合わないため不使用）、および文字入りのボタン・見出し画像（<code>btn_answer1〜4</code>／<code>title_point1〜4</code>／<code>link1〜4</code> ほか）は、すべてHTMLの文字・ボタンに置き換えるため、ご用意は<b>不要</b>です。文字が画像から文字データになることで、表示が軽くなり、文言の修正も簡単になります。</p></div>
+
+<div class="dl"><h3 style="margin:14px 0 6px">デザイナー様向け　納品ルール（共通）</h3>
+<ul style="margin:0 0 0 1.2em">
+<li><b>ファイル名</b>：<code>IMG-01_collection.jpg</code> のように「番号_内容」で保存してください（既存画像は現行と同じファイル名）。</li>
+<li><b>カラー</b>：sRGB／解像度は72dpiで問題ありません。</li>
+<li><b>容量</b>：1ファイルあたり目安 300KB以下（FV背景のみ500KB以下）。</li>
+<li><b>余白</b>：商品画像は上下左右に均等な余白を確保し、被写体が切れないようにしてください。</li>
+<li><b>元データ</b>：撮影した写真は、加工前の元データ（高解像度）もあわせてご共有ください。</li>
+<li><b>提出方法</b>：Google ドライブ・メール等、貴社でお使いの方法で構いません（容量が大きい場合は共有リンクで）。</li>
+</ul>
+<p class="help" style="margin:12px 0 0">【公開後の差し替えについて】LPは広告運用期間中、構成の変更が可能です。画像は貴社制作のものに限り、同じサイズ・同じファイル名で用意いただければ、公開後も差し替えられます。</p>
+</div>
+
+<h2>画像のご提供・ご確認の流れ<small>お手数をおかけしない進め方です</small></h2>
+<div class="card"><table>
+<tr><th>STEP</th><th>内容</th><th>担当</th></tr>
+<tr><td>1</td><td>本書で依頼内容を確認し、撮影・調整の対応可否をお知らせください</td><td>貴社</td></tr>
+<tr><td>2</td><td>画像を提供（難しい項目は、仮画像でLPを先に組み上げます）</td><td>貴社</td></tr>
+<tr><td>3</td><td>LP（HTML）に画像を反映し、表示確認用のURLを共有</td><td>弊社</td></tr>
+<tr><td>4</td><td>表示を確認いただき、微調整の指示をいただく</td><td>貴社・弊社</td></tr>
+<tr><td>5</td><td>最終確認 → 納品・公開</td><td>弊社</td></tr>
+</table></div>
+
+<footer>株式会社新東通信　エステティック通信チーム／本書に関するお問い合わせは担当営業までお願いいたします。</footer>
+</div></body></html>
